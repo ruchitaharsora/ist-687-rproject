@@ -1,17 +1,5 @@
 ################################################################################
-
 # IST 687 Final Project #
-
-################################################################################
-
-# Team: Manpreet Singh Saini
-#       Yash Senjaliya   
-#       Ruchita Harsora
-#       Rahul Khairnar
-#       Amanda Borttnoff
-#       Chaitu Manthena
-
-
 ################################################################################
 
 #-------------------------------------------------------------------------------
@@ -1010,8 +998,8 @@ dfNew_city <- merge(world, Country_city, all.x=TRUE, by.x="region", by.y="Countr
 dfNew_city <- dfNew_city[order(dfNew_city[,5]),]
 mp_city <- ggplot(dfNew_city, aes(x = long, y = lat, group = group)) +
   geom_polygon(aes(fill= NumberOfReservation), colour = "white") +
-  scale_x_continuous(breaks = seq(-180, 210, 45), labels = function(x){paste0(x, "°")}) +
-  scale_y_continuous(breaks = seq(-60, 100, 30), labels = function(x){paste0(x, "°")}) +
+  scale_x_continuous(breaks = seq(-180, 210, 45), labels = function(x){paste0(x, "Â°")}) +
+  scale_y_continuous(breaks = seq(-60, 100, 30), labels = function(x){paste0(x, "Â°")}) +
   scale_fill_gradient(low = "blue", high="red") +
   labs(title="Number Of Reservations From Different Countries",
        y="Latitude", x="Longitude") +
@@ -1035,8 +1023,8 @@ dfNew_resort <- merge(world, Country_resort, all.x=TRUE, by.x="region", by.y="Co
 dfNew_resort <- dfNew_resort[order(dfNew_resort[,5]),]
 mp_resort <- ggplot(dfNew_resort, aes(x = long, y = lat, group = group)) +
   geom_polygon(aes(fill= NumberOfReservation), colour = "white") +
-  scale_x_continuous(breaks = seq(-180, 210, 45), labels = function(x){paste0(x, "°")}) +
-  scale_y_continuous(breaks = seq(-60, 100, 30), labels = function(x){paste0(x, "°")}) +
+  scale_x_continuous(breaks = seq(-180, 210, 45), labels = function(x){paste0(x, "Â°")}) +
+  scale_y_continuous(breaks = seq(-60, 100, 30), labels = function(x){paste0(x, "Â°")}) +
   scale_fill_gradient(low = "blue", high="red") +
   labs(title="Number Of Reservations From Different Countries",
        y="Latitude", x="Longitude") +
